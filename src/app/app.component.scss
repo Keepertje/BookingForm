@@ -1,0 +1,108 @@
+$font-stack:    Excellence In Motion, sans-serif;
+$dark-blue: #003145;
+$red : #d40504;
+$grey : #767676;
+$white:#fff;
+
+$background-image: url('assets/img/af_pattern_bg.png');
+
+.form {
+  font: 100% $font-stack;
+  color: $dark-blue;
+  width:100vw;
+  height:100vh;
+  text-align:left;
+
+}
+
+
+.header {
+  height:75px;
+  background-image:$background-image;
+  text-align:center;
+  margin-top:-15px;
+  width:100vw;
+  h2{
+    padding:25px;
+    font-size:1.2em;
+    color:$white;
+    
+  }
+}
+
+.content{
+  margin:75px auto;
+  padding:20px;
+  text-align:left;
+  border:1px solid $dark-blue;
+  width:350px;
+
+  p{
+    padding:10px;
+    font-size:1em;
+    line-height: 150%;
+
+    &.error{
+      font-size:0.7em;
+      color:$red;
+      padding:0px;
+      margin-top:-10px;
+    }
+  }
+
+  h1{
+    text-align:center;
+    line-height: 120%;
+    font-size:1.8em;
+    font-weight: bold;
+  }
+
+
+  .formgroup{
+    padding:10px;
+    display:block;
+  }
+
+  .field{
+    display:block;
+    font-weight: bold;
+    
+    label{
+      font-size:0.8em;
+    }
+  }
+
+  input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border:1px solid $grey;
+      font-size:1em;
+
+    &.ng-invalid.ng-touched{
+        border:1px solid $red;
+    }
+  }
+
+  button{
+    width: 50%;
+    padding: 12px 20px;
+    margin-left:25%;
+    border-radius:5px;
+    border: none;
+    font-weight:bold;
+    background-color:$red;
+    color:$white;
+  }
+
+}
+
+.footer{
+   height:75px;
+  background-image:$background-image;
+  text-align:center;
+  margin-top:-15px;
+  width:100vw;
+}
+

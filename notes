@@ -1,0 +1,13 @@
+First made two fields with validation
+not having made a reactive angular2 form before I used
+//Never made a model driven form before so I started with http://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
+
+Styling:
+css to use variables like color and font
+
+html:
+first made basic structure,
+div for header, body and footer and put in the text. 
+add the colours and the button. 
+
+added the scss so it looks like the pdf.
