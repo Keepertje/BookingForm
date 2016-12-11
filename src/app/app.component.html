@@ -1,3 +1,35 @@
-<h1>
-  {{title}}
-</h1>
+<div class="form">
+  <div class="header">
+    <h2>
+      CHECK-IN
+    </h2>
+  </div>
+
+  <div class="content">
+
+    <h1> RETRIEVE YOUR BOOKING </h1>
+    <h1>—</h1>
+    <p>You can find your booking by filling out your family name and the booking code in your booking confirmation.</p>
+    <form no-validate class="formgroup" [formGroup]='registerForm' (ngSubmit)='onSubmit()'>
+      <div class="field">
+        <label>Booking code</label>
+        <input type="text" formControlName="field1">
+        <p class="error" *ngIf="!registerForm.controls['field1'].valid && registerForm.controls['field1'].touched">Invalid</p>
+      </div>
+
+      <div class="field">
+        <label>Family name</label>
+        <input type="text" formControlName="field2">
+         <p class="error" *ngIf="!registerForm.controls['field2'].valid && registerForm.controls['field2'].touched">Invalid</p>
+      </div>
+
+
+    <button type="submit" [disabled]="!registerForm.valid" >Retrieve booking</button>
+    </form>
+
+    
+  </div>
+
+  <div class="footer">
+  </div>
+</div>
