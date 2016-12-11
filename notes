@@ -1,9 +1,9 @@
-First made two fields with validation
+First makeit work: just make two fields with validation
 not having made a reactive angular2 form before I used
-//Never made a model driven form before so I started with http://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
+//with http://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
 
 Styling:
-css to use variables like color and font
+scss to use variables like color and font
 
 html:
 first made basic structure,
@@ -12,7 +12,17 @@ add the colours and the button.
 
 added the scss so it looks like the pdf. using vw and vh and % so it will already be responsive
 (desktop version)
-For last part mobile I use mediaqueries (not showing the border and footer if size is lower than 360px;)
+For last part mobile I use mediaqueries (not showing the border;)
 
 
 Fixed the karma test (it is working)
+Fixed the e2e test, to make sure invalid shows when field is invalid
+
+
+
+When submit and the bookingcode is good -> show the mockdata
+-> make router, and make sure it works
+-> show the data
+-> add a bit of styling and structure instead of showing the plain data.
+-> check if the bookingcode was even correct
+-> check if the bookingcode and familyname match.

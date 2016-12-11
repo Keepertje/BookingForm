@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
+     //todo e2e test, show invalid then make a simple page that has a bookingcode.
      //if the bookingcode from bookingcode is in the bookingcode json, go to component.
        
     }
