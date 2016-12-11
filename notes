@@ -10,4 +10,9 @@ first made basic structure,
 div for header, body and footer and put in the text. 
 add the colours and the button. 
 
-added the scss so it looks like the pdf.
+added the scss so it looks like the pdf. using vw and vh and % so it will already be responsive
+(desktop version)
+For last part mobile I use mediaqueries (not showing the border and footer if size is lower than 360px;)
+
+
+Fixed the karma test (it is working)
