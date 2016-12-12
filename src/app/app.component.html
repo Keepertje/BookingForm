@@ -13,18 +13,18 @@
     <form no-validate class="formgroup" [formGroup]='registerForm' (ngSubmit)='onSubmit()'>
       <div class="field">
         <label>Booking code</label>
-        <input type="text" formControlName="bookingcode">
-        <p class="error" *ngIf="!registerForm.controls['bookingcode'].valid && registerForm.controls['bookingcode'].touched">Invalid</p>
+        <input type="text" id="booking" formControlName="bookingcode">
+        <p class="error" id="bookingerror" *ngIf="!registerForm.controls['bookingcode'].valid && registerForm.controls['bookingcode'].touched">Invalid</p>
       </div>
 
       <div class="field">
         <label>Family name</label>
-        <input type="text" formControlName="familyname">
-         <p class="error" *ngIf="!registerForm.controls['familyname'].valid && registerForm.controls['familyname'].touched">Invalid</p>
+        <input id="family" type="text" formControlName="familyname">
+         <p class="error" id="familyerror" *ngIf="!registerForm.controls['familyname'].valid && registerForm.controls['familyname'].touched">Invalid</p>
       </div>
 
 
-    <button type="submit" [disabled]="!registerForm.valid" >Retrieve booking</button>
+    <button id="submitbutton" type="submit" [disabled]="!registerForm.valid" >Retrieve booking</button>
     </form>
 
     

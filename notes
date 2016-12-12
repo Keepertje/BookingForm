@@ -2,6 +2,8 @@ First makeit work: just make two fields with validation
 not having made a reactive angular2 form before I used
 //with http://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
 
+Use angular cli, short timesoan -> don't want to bother with setting up the project.
+
 Styling:
 scss to use variables like color and font
 
@@ -16,8 +18,9 @@ For last part mobile I use mediaqueries (not showing the border;)
 
 
 Fixed the karma test (it is working)
-Fixed the e2e test, to make sure invalid shows when field is invalid
 
+Fixed the e2e test, to make sure invalid shows when field is invalid
+In e2e: define the values at the top, if they change you can change them in one place and not through the tests.
 
 
 When submit and the bookingcode is good -> show the mockdata

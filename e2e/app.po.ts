@@ -5,7 +5,15 @@ export class DEMOPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getFieldBookingError(){
+   return element(by.id('bookingerror')).isPresent();
+  }
+  
+  getFieldFamilyError(){
+    return element(by.id('familyerror')).isPresent();
+  }
+
+  clickSubmitButton(){
+    return element(by.css('.formgroup button')).click();
   }
 }
