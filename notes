@@ -1,31 +1,30 @@
-First makeit work: just make two fields with validation
-not having made a reactive angular2 form before I used
-//with http://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
+I use angular-cli, for the short timespan I don't want to be bothered with setting up the project and the build process.
 
-Use angular cli, short timesoan -> don't want to bother with setting up the project.
+Then I set up a git repo to make sure I don;t loose any working stuff in the process.
 
-Styling:
-scss to use variables like color and font
-
-html:
-first made basic structure,
-div for header, body and footer and put in the text. 
-add the colours and the button. 
-
-added the scss so it looks like the pdf. using vw and vh and % so it will already be responsive
-(desktop version)
-For last part mobile I use mediaqueries (not showing the border;)
+First thing I did was what was necessary: make two fields with validation.
+I never made a reactive angular2 form before so I used 
+ http://blog.thoughtram.io/angular/2016/06/22/model-driven-forms-in-angular-2.html
+to get started.
+I used a regex as Validator to capture all the validations in one go. 
 
 
-Fixed the karma test (it is working)
+Then I made the basic structure in html based on the screenshots. A header for the check-in part and a body
+for the actual form. I also added the text and button.
 
-Fixed the e2e test, to make sure invalid shows when field is invalid
-In e2e: define the values at the top, if they change you can change them in one place and not through the tests.
+Then I started on the styling, I decided to use sass. Because the colors are used on multiple places I can then declare them
+as variables. Also I have worked with css and less but not with sass before so I thought this was a good idea to try it out.
+I used vw, vh and % as much as possible already to make it responsive. For the last bit of responsiveness I used a media query (not showing the border).
+
+I then made the karma test, after that I worked on the e2e test to make sure 'invalid' is shown when the fields are invalid.
+I define the possible inputs at the top of the e2e file, if they (the validation rules) change you can change them in one place and not everywhere in the tests.
+
+Then I started on the mockdata. I created a service with angular-cli to get the mockdata and added it to the onSubmit in the component to actually gather it.
+After that I tried to make the karma test for the service working, but I got stuck on that typescript wants the response to be void(). 
 
 
-When submit and the bookingcode is good -> show the mockdata
--> make router, and make sure it works
--> show the data
--> add a bit of styling and structure instead of showing the plain data.
--> check if the bookingcode was even correct
--> check if the bookingcode and familyname match.
+
+Lessons learned:
+-Angular2 changed a lot since I used it for the last time (beginning of 2016). Searching is hard since 80% is deprecated / changed /not used / angular1 
+-The validations need to be customized so the error messages can be customized as well and the user knows better what went wrong. 
+

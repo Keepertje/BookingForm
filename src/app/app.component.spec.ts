@@ -7,13 +7,14 @@ import {
   FormGroup,
   ReactiveFormsModule
 } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
-      ], imports: [ReactiveFormsModule]
+      ], imports: [ReactiveFormsModule,HttpModule]
     });
     TestBed.compileComponents();
   });

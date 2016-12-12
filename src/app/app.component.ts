@@ -1,19 +1,22 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl ,FormBuilder, Validators } from '@angular/forms';
+import { Passenger, Flight, BookingService } from './services/booking.service';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [BookingService]
  
 })
 export class AppComponent implements OnInit {
-
+  passenger: Passenger;
+  flight : Flight;
   registerForm : FormGroup;
   
-  constructor(private formBuilder : FormBuilder){}
+  constructor(private formBuilder : FormBuilder, private bookingService: BookingService ){}
 
   ngOnInit(){
     this.registerForm = this.formBuilder.group({
@@ -24,9 +27,12 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
-     //todo e2e test, show invalid then make a simple page that has a bookingcode.
-     //if the bookingcode from bookingcode is in the bookingcode json, go to component.
-       
+     this.bookingService.getBooking().subscribe((data) => {
+       this.passenger =  new Passenger(data.passengers);
+       this.flight = new Flight(data);
+       console.log(this.passenger, this.flight)
+
+     })    
     }
 
 }

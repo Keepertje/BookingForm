@@ -12,8 +12,4 @@ export class DEMOPage {
   getFieldFamilyError(){
     return element(by.id('familyerror')).isPresent();
   }
-
-  clickSubmitButton(){
-    return element(by.css('.formgroup button')).click();
-  }
 }

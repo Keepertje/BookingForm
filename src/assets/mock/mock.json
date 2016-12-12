@@ -1,11 +1,5 @@
 {
-    "bookingCode": "PZIGZ3",
-    "contactDetails": [
-        {
-            "@class": "EmailAddress",
-            "address": "TRAINER@YAHOO.FR"
-        }
-    ],
+  
     "itinerary": {
         "type": "ONE_WAY",
         "connections": [
